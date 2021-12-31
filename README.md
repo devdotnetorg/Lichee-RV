@@ -39,5 +39,5 @@ Dimensions – 43.2 x 25mm
 You can read it using Google Translate.
 
 ## Tools
-[PhoenixCard](/SDK/PhoenixCard.rar)
+[PhoenixCard](/Lichee_RV/tool/PhoenixCard.rar)
 
