@@ -26,6 +26,8 @@ Power Supply – 5V/0.5A via USB-C port
 Dimensions – 43.2 x 25mm
 
 ## Links
+[Присматриваемся к одноплатникам на RISC-V, обзор модуля Sipeed Lichee RV на процессоре Allwinner D1](https://habr.com/ru/company/timeweb/blog/649327/)
+
 [Sipeed LICHEE/D1](https://dl.sipeed.com/shareURL/LICHEE/D1)
 
 [Sipeed Lichee RV Resources on Mega]( https://mega.nz/folder/lx4CyZBA#PiFhY7oSVQ3gp2ZZ_AnwYA)
