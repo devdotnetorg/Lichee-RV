@@ -1,0 +1,1 @@
+Only for SLA printing, doesn't support FDM.
