@@ -1,0 +1,35 @@
+/*
+* DevDotNet.ORG <anton@devdotnet.org>
+*
+* MIT License
+* 
+* Device: Blue led, https://www.dfrobot.com/product-492.html
+* Module      Connector
+* Control    <-  PD17
+*/
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	fragment@0 {
+		target-path = "/";
+		__overlay__ {
+			leds {
+				compatible = "gpio-leds";
+			};
+			
+		};
+	};
+	
+	fragment@1 {
+		target-path = "/";
+		__overlay__ {
+			__symbols__ {
+				pio = "/soc/pinctrl@2000000";
+				leds = "/leds";
+			};
+			
+		};
+	};
+};

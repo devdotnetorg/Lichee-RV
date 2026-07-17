@@ -1,0 +1,41 @@
+/*
+* DevDotNet.ORG <anton@devdotnet.org>
+*
+* MIT License
+* 
+* Device: Blue led, https://www.dfrobot.com/product-492.html
+* Module      Connector
+* Control    <-  PD17
+*/
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "allwinner,sun20i-d1";
+
+	fragment@0 {
+		target = <&pinctrl>;
+		__overlay__ {
+			led_bluecustom_pin: led_bluecustom_pin {
+				pins = "PD17";
+				function = "gpio_out";
+			};
+		};
+	};
+
+	fragment@1 {
+		target-path = "/leds/";
+		__overlay__ {
+			bluecustom {
+				compatible = "gpio-leds";
+				label = "nezha:blue:status";			 	
+				pinctrl-names = "default";
+				pinctrl-0 = <&led_bluecustom_pin>;
+				gpios = <&pinctrl 3 17 1>; /* PB7 - for LED from DFrobot */
+				/* gpios = <&pinctrl 3 17 1>;  PB7 - for other LED */
+				default-state = "off";
+			};
+		};
+	};
+};

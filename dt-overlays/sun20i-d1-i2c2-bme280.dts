@@ -1,0 +1,27 @@
+/*
+* DevDotNet.ORG <anton@devdotnet.org>
+*
+* MIT License
+* 
+* Device: Bosch Sensortec BME280 / banana pi m-64
+* Module      Connector
+* SDA		<-  PH3
+* SCL		<-  PH2
+*/
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "allwinner,sun20i-d1";	
+
+	fragment@1 {
+		target-path = "/soc/i2c@2502800";
+		__overlay__ {		
+			bme280@76 {
+				compatible = "bosch,bme280";				
+				reg = <0x76>;				
+				status = "okay";				
+			};
+		};
+	};
+};
